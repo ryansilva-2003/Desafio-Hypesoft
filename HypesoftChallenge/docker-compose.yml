@@ -1,0 +1,26 @@
+version: '3.9'
+
+services:
+  api:
+    build:
+      context: .
+      dockerfile: src/Hypesoft.API/Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - Mongo__ConnectionString=mongodb://mongo:27017
+      - Mongo__Database=HypesoftDB
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:7
+    container_name: hypesoft-mongo
+    ports:
+      - "27017:27017"
+    volumes:
+    - mongo_data:/data/db
+
+volumes:
+  mongo_data:
