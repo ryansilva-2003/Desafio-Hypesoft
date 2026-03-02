@@ -1,4 +1,4 @@
-namespace Hypesoft.API.Configurations;
+namespace Hypesoft.Infrastructure.Data;
 
 public class MongoSettings
 {

@@ -1,0 +1,53 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "HypesoftChallenge", "HypesoftChallenge", "{50C68D32-841C-383F-B1EE-F8F05FBCB732}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{AD2E0880-3497-04B3-B450-586DE695EC0E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypesoft.API", "HypesoftChallenge\src\Hypesoft.API\Hypesoft.API.csproj", "{C7500975-F29C-96D5-1E8E-28F5F7EE0322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypesoft.Application", "HypesoftChallenge\src\Hypesoft.Application\Hypesoft.Application.csproj", "{335936A1-50D7-1DAB-7628-DA914D7F4593}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypesoft.Domain", "HypesoftChallenge\src\Hypesoft.Domain\Hypesoft.Domain.csproj", "{DEDB513A-9F1D-5825-4F24-A846743D4BAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hypesoft.Infrastructure", "HypesoftChallenge\src\Hypesoft.Infrastructure\Hypesoft.Infrastructure.csproj", "{1B90F406-D4C6-6308-F4CD-39B283055338}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{C7500975-F29C-96D5-1E8E-28F5F7EE0322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C7500975-F29C-96D5-1E8E-28F5F7EE0322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C7500975-F29C-96D5-1E8E-28F5F7EE0322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C7500975-F29C-96D5-1E8E-28F5F7EE0322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{335936A1-50D7-1DAB-7628-DA914D7F4593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{335936A1-50D7-1DAB-7628-DA914D7F4593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{335936A1-50D7-1DAB-7628-DA914D7F4593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{335936A1-50D7-1DAB-7628-DA914D7F4593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB513A-9F1D-5825-4F24-A846743D4BAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB513A-9F1D-5825-4F24-A846743D4BAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDB513A-9F1D-5825-4F24-A846743D4BAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDB513A-9F1D-5825-4F24-A846743D4BAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1B90F406-D4C6-6308-F4CD-39B283055338}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1B90F406-D4C6-6308-F4CD-39B283055338}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1B90F406-D4C6-6308-F4CD-39B283055338}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1B90F406-D4C6-6308-F4CD-39B283055338}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{AD2E0880-3497-04B3-B450-586DE695EC0E} = {50C68D32-841C-383F-B1EE-F8F05FBCB732}
+		{C7500975-F29C-96D5-1E8E-28F5F7EE0322} = {AD2E0880-3497-04B3-B450-586DE695EC0E}
+		{335936A1-50D7-1DAB-7628-DA914D7F4593} = {AD2E0880-3497-04B3-B450-586DE695EC0E}
+		{DEDB513A-9F1D-5825-4F24-A846743D4BAB} = {AD2E0880-3497-04B3-B450-586DE695EC0E}
+		{1B90F406-D4C6-6308-F4CD-39B283055338} = {AD2E0880-3497-04B3-B450-586DE695EC0E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {8C0410A4-4455-4A4B-ABE4-570E38CD48C4}
+	EndGlobalSection
+EndGlobal

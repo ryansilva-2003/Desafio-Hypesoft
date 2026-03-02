@@ -1,9 +1,8 @@
 using MongoDB.Driver;
-using Hypesoft.API.Configurations;
 using Microsoft.Extensions.Options;
 using Hypesoft.Domain.Entities;
 
-namespace Hypesoft.API.Data;
+namespace Hypesoft.Infrastructure.Data;
 
 public class MongoContext
 {

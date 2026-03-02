@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "z4vG/OgzK7c=",
+  "dgSpecHash": "dVz1C2DnR2U=",
   "success": true,
   "projectFilePath": "C:\\Users\\Ryan\\OneDrive\\Desktop\\DesafioHypesoft\\HypesoftChallenge\\src\\Hypesoft.API\\Hypesoft.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Ryan\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
+    "C:\\Users\\Ryan\\.nuget\\packages\\mediatr\\11.1.0\\mediatr.11.1.0.nupkg.sha512",
+    "C:\\Users\\Ryan\\.nuget\\packages\\mediatr.contracts\\1.0.1\\mediatr.contracts.1.0.1.nupkg.sha512",
+    "C:\\Users\\Ryan\\.nuget\\packages\\mediatr.extensions.microsoft.dependencyinjection\\11.1.0\\mediatr.extensions.microsoft.dependencyinjection.11.1.0.nupkg.sha512",
     "C:\\Users\\Ryan\\.nuget\\packages\\microsoft.aspnetcore.openapi\\10.0.3\\microsoft.aspnetcore.openapi.10.0.3.nupkg.sha512",
     "C:\\Users\\Ryan\\.nuget\\packages\\microsoft.extensions.apidescription.server\\10.0.0\\microsoft.extensions.apidescription.server.10.0.0.nupkg.sha512",
     "C:\\Users\\Ryan\\.nuget\\packages\\microsoft.openapi\\2.4.1\\microsoft.openapi.2.4.1.nupkg.sha512",

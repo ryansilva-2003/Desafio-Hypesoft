@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore.Mvc;
-using MongoDB.Driver;
-using Hypesoft.API.Data;
-using Hypesoft.Domain.Entities;
+using MediatR;
+using Hypesoft.Application.Commands;
+using Hypesoft.Application.Queries;
 
 namespace Hypesoft.API.Controllers;
 
@@ -9,57 +9,46 @@ namespace Hypesoft.API.Controllers;
 [Route("api/[controller]")]
 public class ProductController : ControllerBase
 {
-    private readonly MongoContext _context;
+    private readonly IMediator _mediator;
 
-    public ProductController(MongoContext context)
+    public ProductController(IMediator mediator)
     {
-        _context = context;
+        _mediator = mediator;
+    }
+
+    [HttpPost]
+    public async Task<IActionResult> Create(CreateProductCommand command)
+    {
+        var id = await _mediator.Send(command);
+
+        return CreatedAtAction(nameof(GetById), new { id }, null);
     }
 
     [HttpGet("{id}")]
     public async Task<IActionResult> GetById(Guid id)
     {
-    var product = await _context.Products
-        .Find(p => p.Id == id)
-        .FirstOrDefaultAsync();
+        var result = await _mediator.Send(new GetProductByIdQuery(id));
 
-    if (product == null)
-        return NotFound();
+        if (result == null)
+            return NotFound();
 
-    return Ok(product);
-    }
-
-    [HttpPost]
-    public async Task<IActionResult> Create(Product product)
-    {
-    await _context.Products.InsertOneAsync(product);
-
-    return CreatedAtAction(nameof(GetById), 
-        new { id = product.Id }, 
-        product);
+        return Ok(result);
     }
 
     [HttpDelete("{id}")]
     public async Task<IActionResult> Delete(Guid id)
     {
-    var result = await _context.Products
-        .DeleteOneAsync(p => p.Id == id);
-
-    if (result.DeletedCount == 0)
-        return NotFound();
-
-    return NoContent();
+        await _mediator.Send(new DeleteProductCommand(id));
+        return NoContent();
     }
 
     [HttpPut("{id}")]
-    public async Task<IActionResult> Update(Guid id, Product updatedProduct)
+    public async Task<IActionResult> Update(Guid id, UpdateProductCommand command)
     {
-    var result = await _context.Products
-        .ReplaceOneAsync(p => p.Id == id, updatedProduct);
+        command.Id = id;
 
-    if (result.MatchedCount == 0)
-        return NotFound();
+        await _mediator.Send(command);
 
-    return NoContent();
+        return NoContent();
     }
 }

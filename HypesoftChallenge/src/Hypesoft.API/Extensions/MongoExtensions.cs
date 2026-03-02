@@ -1,5 +1,4 @@
-using Hypesoft.API.Configurations;
-using Hypesoft.API.Data;
+using Hypesoft.Infrastructure.Data;
 using Microsoft.Extensions.Options;
 
 namespace Hypesoft.API.Extensions;
