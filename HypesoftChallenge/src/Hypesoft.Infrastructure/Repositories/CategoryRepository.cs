@@ -38,4 +38,11 @@ public class CategoryRepository : ICategoryRepository
         await _context.Categories
             .DeleteOneAsync(c => c.Id == id);
     }
+
+    public async Task<Category> UpdateAsync(Category category)
+    {
+    await _context.Categories
+        .ReplaceOneAsync(c => c.Id == category.Id, category);
+    return category;
+    }
 }

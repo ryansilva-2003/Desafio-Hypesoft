@@ -44,4 +44,14 @@ public class ProductRepository : IProductRepository
         await _context.Products
             .DeleteOneAsync(p => p.Id == id);
     }
+
+    public async Task<List<Product>> SearchAsync(string searchTerm)
+{
+    var filter = Builders<Product>.Filter.Or(
+        Builders<Product>.Filter.Regex(p => p.Name, new MongoDB.Bson.BsonRegularExpression(searchTerm, "i")),
+        Builders<Product>.Filter.Regex(p => p.Description, new MongoDB.Bson.BsonRegularExpression(searchTerm, "i"))
+    );
+
+    return await _context.Products.Find(filter).ToListAsync();
+}
 }

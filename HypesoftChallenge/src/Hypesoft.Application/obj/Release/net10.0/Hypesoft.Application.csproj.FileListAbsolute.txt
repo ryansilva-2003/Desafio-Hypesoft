@@ -1,0 +1,16 @@
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\bin\Release\net10.0\Hypesoft.Application.deps.json
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\bin\Release\net10.0\Hypesoft.Application.dll
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\bin\Release\net10.0\Hypesoft.Application.pdb
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\bin\Release\net10.0\Hypesoft.Domain.dll
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\bin\Release\net10.0\Hypesoft.Domain.pdb
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.csproj.AssemblyReference.cache
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.AssemblyInfoInputs.cache
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.AssemblyInfo.cs
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.csproj.CoreCompileInputs.cache
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.sourcelink.json
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.61B6789D.Up2Date
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.dll
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\refint\Hypesoft.Application.dll
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\Hypesoft.Application.pdb
+C:\Users\Ryan\OneDrive\Desktop\DesafioHypesoft\HypesoftChallenge\src\Hypesoft.Application\obj\Release\net10.0\ref\Hypesoft.Application.dll

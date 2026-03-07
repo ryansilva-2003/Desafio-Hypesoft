@@ -1,39 +1,72 @@
 using Microsoft.AspNetCore.Mvc;
-using MediatR;
-using Hypesoft.Application.Commands;
-using Hypesoft.Application.Queries;
+using Hypesoft.Domain.Entities;
+using Hypesoft.Domain.Repositories;
+using Hypesoft.Domain.Entities;
 
-namespace Hypesoft.API.Controllers;
-
-[ApiController]
-[Route("api/[controller]")]
-public class CategoryController : ControllerBase
+namespace Hypesoft.API.Controllers
 {
-    private readonly IMediator _mediator;
-
-    public CategoryController(IMediator mediator)
+    [ApiController]
+    [Route("api/[controller]")]
+    public class CategoryController : ControllerBase
     {
-        _mediator = mediator;
-    }
+        private readonly ICategoryRepository _repository;
 
-    [HttpGet]
-    public async Task<IActionResult> GetAll()
-    {
-        var categories = await _mediator.Send(new GetCategoriesQuery());
-        return Ok(categories);
-    }
+        public CategoryController(ICategoryRepository repository)
+        {
+            _repository = repository;
+        }
 
-    [HttpPost]
-    public async Task<IActionResult> Create(CreateCategoryCommand command)
-    {
-        var id = await _mediator.Send(command);
-        return CreatedAtAction(nameof(GetAll), new { id }, null);
-    }
+        [HttpGet]
+        public async Task<IActionResult> GetAll()
+        {
+            var categories = await _repository.GetAllAsync();
+            return Ok(categories);
+        }
 
-    [HttpDelete("{id}")]
-    public async Task<IActionResult> Delete(Guid id)
-    {
-        await _mediator.Send(new DeleteCategoryCommand(id));
-        return NoContent();
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetById(Guid id)
+        {
+            var category = await _repository.GetByIdAsync(id);
+
+            if (category == null)
+                return NotFound();
+
+            return Ok(category);
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> Create([FromBody] Category category)
+        {
+            if (category.Id == Guid.Empty)
+                category.Id = Guid.NewGuid();
+
+            await _repository.CreateAsync(category);
+
+            return CreatedAtAction(nameof(GetById), new { id = category.Id }, category);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> Update(Guid id, [FromBody] Category category)
+        {
+            var existingCategory = await _repository.GetByIdAsync(id);
+            if (existingCategory == null)
+                return NotFound();
+
+            category.Id = id;
+            await _repository.UpdateAsync(category);
+
+            return NoContent();
+        }
+
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> Delete(Guid id)
+        {
+            var existingCategory = await _repository.GetByIdAsync(id);
+            if (existingCategory == null)
+                return NotFound();
+
+            await _repository.DeleteAsync(id);
+            return NoContent();
+        }
     }
 }

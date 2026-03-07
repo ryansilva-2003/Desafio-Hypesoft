@@ -10,7 +10,7 @@ RUN dotnet restore "src/Hypesoft.API/Hypesoft.API.csproj"
 
 COPY . .
 
-WORKDIR "/src/src/Hypesoft.API"
+WORKDIR "/src/Hypesoft.API"
 RUN dotnet publish -c Release -o /app/publish /p:UseAppHost=false
 
 FROM mcr.microsoft.com/dotnet/aspnet:10.0 AS final
